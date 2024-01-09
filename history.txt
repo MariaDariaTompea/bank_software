@@ -1,0 +1,159 @@
+
+1
+7-1-2024 16:21:6 created account
+1
+7-1-2024 16:21:17 login
+1
+7-1-2024 16:21:20 list sold  0.00
+1
+7-1-2024 16:21:26 deposit  200.00
+1
+7-1-2024 16:21:34 withdrawals  100.00
+1
+7-1-2024 16:21:39 logout
+2
+7-1-2024 16:22:5 created account
+2
+7-1-2024 16:22:15 login
+2
+7-1-2024 16:22:21 Customer report
+2
+7-1-2024 16:22:32 deposit  500.00
+2
+7-1-2024 16:22:37 transfer to   Popescu Mircea Sorin 200.00   lei
+2
+7-1-2024 16:22:39 list sold  300.00
+2
+7-1-2024 16:22:42 Customer report
+2
+7-1-2024 16:22:50 withdrawals  25.00
+2
+7-1-2024 16:22:51 logout
+1
+7-1-2024 16:23:2 login
+1
+7-1-2024 16:23:5 list sold  300.00
+1
+7-1-2024 16:23:29 list sold  300.00
+1
+7-1-2024 16:23:34 deposit  50.00
+1
+7-1-2024 16:23:38 withdrawals  25.00
+1
+7-1-2024 16:23:45 transfer to   Ariton Anca Maria 10.00   lei
+1
+7-1-2024 16:24:2 export all transaction to excel
+1
+7-1-2024 16:24:16 account statement
+1
+7-1-2024 16:24:21 Customer report
+1
+7-1-2024 16:24:24 logout
+1
+7-1-2024 16:28:3 login
+1
+7-1-2024 17:32:45 logout
+1
+7-1-2024 17:33:59 login
+1
+7-1-2024 17:34:37 logout
+2
+7-1-2024 17:34:43 login
+2
+7-1-2024 17:34:52 list sold  285.00
+2
+7-1-2024 17:35:2 export all transaction to excel
+2
+7-1-2024 17:36:2 logout
+3
+7-1-2024 17:36:25 created account
+3
+7-1-2024 17:36:31 login
+3
+7-1-2024 17:36:32 list sold  0.00
+3
+7-1-2024 17:36:37 deposit  50.00
+3
+7-1-2024 17:36:42 withdrawals  5.00
+3
+7-1-2024 17:36:46 withdrawals  10.00
+3
+7-1-2024 17:36:55 transfer to   Ariton Anca Maria 15.00   lei
+3
+7-1-2024 17:37:3 Customer report
+3
+7-1-2024 17:37:32 logout
+4
+7-1-2024 17:39:13 created account
+4
+7-1-2024 17:39:19 login
+4
+7-1-2024 17:39:26 deposit  1000.00
+4
+7-1-2024 17:39:31 withdrawals  300.00
+4
+7-1-2024 17:39:37 withdrawals  200.00
+4
+7-1-2024 17:39:55 transfer to   Popescu Mircea Sorin 150.00   lei
+4
+7-1-2024 17:39:56 list sold  350.00
+4
+7-1-2024 17:40:22 export all transaction to excel 
+4
+7-1-2024 17:40:37 account statement 
+4
+7-1-2024 17:40:46 Customer report  
+4
+7-1-2024 17:41:3 transfer to   Popescu Mircea Sorin 100.00   lei
+4
+7-1-2024 17:41:6 Customer report  
+4
+7-1-2024 17:41:17 list sold  250.00
+4
+7-1-2024 17:41:24 transfer to   Ariton Anca Maria 25.00   lei
+4
+7-1-2024 17:41:25 Customer report  
+4
+7-1-2024 17:41:29 logout
+1
+7-1-2024 17:42:25 login
+1
+7-1-2024 17:42:26 list sold  565.00
+1
+7-1-2024 17:43:50 export all transaction to excel 
+1
+7-1-2024 17:44:0 Customer report  
+2
+7-1-2024 17:45:34 login
+2
+7-1-2024 17:45:57 All transaction report 
+2
+7-1-2024 17:46:19 All transaction report 
+2
+7-1-2024 17:46:29 logout
+1
+7-1-2024 17:46:36 login
+1
+7-1-2024 17:47:21 All transaction report 
+1
+7-1-2024 17:47:32 logout
+2
+7-1-2024 17:48:26 login
+2
+7-1-2024 17:48:35 list sold  325.00
+2
+7-1-2024 17:48:50 Customer report  
+2
+7-1-2024 17:49:1 logout
+1
+8-1-2024 11:56:9 login
+1
+8-1-2024 11:56:14 list sold  565.00
+1
+8-1-2024 11:57:3 account statement 
+1
+8-1-2024 11:58:32 Customer report  
+1
+8-1-2024 11:58:58 export all transaction to excel 
+1
+8-1-2024 12:2:50 logout
