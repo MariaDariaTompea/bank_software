@@ -5,6 +5,7 @@
 # include "calendar.h"
 #include "libxl.h"
 
+// Global variables to manage user information and transactions
 int is_logged = 0, next_user_id=0; char user_name[100];
 struct Account
 {
@@ -21,8 +22,10 @@ struct Transaction
     float amount;
 }T[10000];
 int N_A=0, N_T=0;
+
 int valid_option(char *s, int n)
 {
+    // Function to check if a given string is a valid option
     char val_op[10][10]={"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
     int i;
     for (i = 0; i<n; i++)
@@ -32,6 +35,7 @@ int valid_option(char *s, int n)
 }
 int Logged_menu()
 {
+    // Function to display the menu options when a user is logged in
     printf("\n%s\n", user_name);
     printf("%s\n", "------------------------------------");;
     printf("1. Sold\n");
@@ -53,6 +57,7 @@ int Logged_menu()
 }
 int Login_menu()
 {
+    // Function to display the menu options for login/signup/exit
     printf("1. Login\n");
     printf("2. Sign up\n");
     printf("3. Exit\n");
@@ -65,6 +70,9 @@ int Login_menu()
 }
 int Login()
 {
+    // Function to handle the login process
+    // Parameters: None
+    // Returns: User ID (positive integer) if login is successful, 0 otherwise
     char user[100], pass[100]; int i;
     printf("user name : "); scanf("%s", user);
     printf("password  : "); scanf("%s", pass);
@@ -83,7 +91,10 @@ int Login()
     return 0;
 }
 void Sign_up()
-{
+{    
+    // Function to handle user registration
+    // Parameters: None
+    // Returns: None
     char user[100], pass[100], name[100]; int ok = 1;
     do
     {
@@ -153,6 +164,9 @@ void Sign_up()
 }
 void Logout()
 {
+    // Function to log out the current user
+    // Parameters: None
+    // Returns: None
     FILE * f_hist = fopen("history.txt", "a");
     char timp[20]; Time(timp); char data[20]; data_to_str(DC, data);
     fprintf(f_hist, "%d\n%s %s %s\n", is_logged, data, timp, "logout");
@@ -161,6 +175,9 @@ void Logout()
 }
 int load_data_base_from_file()
 {
+    // Function to load data from files into the program's data structures
+    // Parameters: None
+    // Returns: 1 if loading is successful, 0 otherwise
     FILE * f_login = fopen("login.txt", "r");
     if (f_login == NULL)
         //f_login = fopen("login.txt", "w");
@@ -199,6 +216,9 @@ int load_data_base_from_file()
 }
 float Sold_user (int id)
 {
+    // Function to calculate and return the total amount of money for a specific user
+    // Parameters: User ID
+    // Returns: Total amount (float)
     float s = 0; int i;
     for (i = 1; i<=N_T ; i++)
     {
@@ -211,6 +231,9 @@ float Sold_user (int id)
 }
 void List_Sold_User(int id)
 {
+    // Function to display the account balance for the logged-in user
+    // Parameters: User ID
+    // Returns: None
     float sold = Sold_user(id);
     printf("\n--------------------------------------------\n");
     char data[20];
@@ -225,6 +248,9 @@ void List_Sold_User(int id)
 }
 void Save_Transaction()
 {
+    // Function to save transactions to the transaction file
+    // Parameters: None
+    // Returns: None
     FILE* F=fopen("transaction.txt", "w");
     int i;
     for (i=1; i<=N_T; i++)
@@ -233,6 +259,9 @@ void Save_Transaction()
 }
 void Deposit (int id)
 {
+    // Function to handle the deposit operation for a user
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     float sum;
     printf("Amount deposit: "); char sir[20]; scanf("%s", sir);
@@ -259,6 +288,9 @@ void Deposit (int id)
 }
 void Withdrawals (int id)
 {
+    // Function to handle the withdrawal operation for a user
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     float sum;
     printf("Amount withdrawals: ");
@@ -290,6 +322,9 @@ void Withdrawals (int id)
 }
 int Exist_id(int x)
 {
+    // Function to check if a given user ID exists
+    // Parameters: User ID
+    // Returns: Index of the user in the Account array if found, 0 otherwise
     int i;
     for (i = 1; i<=N_A; i++)
         if (A[i].id == x)
@@ -298,6 +333,9 @@ int Exist_id(int x)
 }
 void Transfer (int id)
 {
+    // Function to handle the transfer operation between users
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     float sum; int id_to_transfer;
     printf("id to transfer "); scanf("%d", &id_to_transfer);
@@ -339,6 +377,9 @@ void Transfer (int id)
 }
 void All_Transaction(int id)
 {
+    // Function to display all transactions for the logged-in user
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     int i;
     for (i=1; i<= N_T; i++)
@@ -355,6 +396,9 @@ void All_Transaction(int id)
 }
 void Export_All_Transaction(int id)
 {
+    // Function to export all transactions to an Excel file
+    // Parameters: User ID
+    // Returns: None
     BookHandle book =  xlCreateXMLBook();
     if(book)
     {
@@ -409,6 +453,9 @@ void Export_All_Transaction(int id)
 }
 void Account_Statement(int id)
 {
+    // Function to display the account statement for a user within a specified date range
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     struct date d1, d2;
     printf ("Input start date: \n");
@@ -474,7 +521,10 @@ void Account_Statement(int id)
 
 }
 void Customer (int id)
-{
+{ 
+    // Function to display customers who have transactions with the logged-in user
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     printf("Customers: \n");
     int C[10000]={}, i, j;
@@ -498,6 +548,9 @@ void Customer (int id)
 }
 void History(int id)
 {
+    // Function to display the transaction history for the logged-in user
+    // Parameters: User ID
+    // Returns: None
     printf("\n--------------------------------------------\n");
     FILE * f_hist = fopen("history.txt", "r");
     int idh; char text[200]="";
@@ -515,7 +568,9 @@ void History(int id)
 }
 int main()
 {
-
+    // Main function containing the program logic
+    // Parameters: None
+    // Returns: Exit code (int)
     Set_Data();
     if(load_data_base_from_file())
         while(1)
